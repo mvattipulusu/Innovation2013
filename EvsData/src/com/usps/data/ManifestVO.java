@@ -1,23 +1,27 @@
 package com.usps.data;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class ManifestVO {
+import com.usps.evs.vo.ManifestDetail;
+import com.usps.evs.vo.ManifestHeader;
+
+public class ManifestVO implements Serializable{
 	
-	private Header header;
+	private ManifestHeader header;
 	
-	private List<Detail> details;
+	private List<ManifestDetail> details;
 	
-	public Header getHeader() {
+	public ManifestHeader getHeader() {
 		return header;
 	}
-	public void setHeader(Header header) {
+	public void setHeader(ManifestHeader header) {
 		this.header = header;
 	}
-	public List<Detail> getDetails() {
+	public List<ManifestDetail> getDetails() {
 		return details;
 	}
-	public void setDetails(List<Detail> details) {
+	public void setDetails(List<ManifestDetail> details) {
 		this.details = details;
 	}
 	@Override
