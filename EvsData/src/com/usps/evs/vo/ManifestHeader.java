@@ -30,7 +30,9 @@
  * Added metricsSeqNo
  */
 package com.usps.evs.vo;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class ManifestHeader 
 {
@@ -99,6 +101,7 @@ public class ManifestHeader
 	private String tpbFlag = "N";   /* REL 30 */
     private double calcPostage;
 	
+    private List<ManifestDetail> details = new ArrayList<ManifestDetail>();
 	//REL 21.0.0
 	private ManifestHeaderRawLineVo headerRawLine = new ManifestHeaderRawLineVo();
 	
@@ -730,6 +733,14 @@ public class ManifestHeader
 				+ ", tpbPoDuns=" + tpbPoDuns + ", tpbFlag=" + tpbFlag
 				+ ", calcPostage=" + calcPostage + ", headerRawLine="
 				+ headerRawLine + "]";
+	}
+
+	public List<ManifestDetail> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<ManifestDetail> details) {
+		this.details = details;
 	}
 	
 }
