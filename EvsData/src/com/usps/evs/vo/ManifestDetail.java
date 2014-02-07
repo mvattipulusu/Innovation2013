@@ -67,26 +67,26 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
     private BigDecimal totalPostage = new BigDecimal(0.00);
     private String uomCode;
     private double weight;
-    private String processingCategory;
-    private String destinationRateIndicator;
-    private String rateIndicator;
-    private String zone;
+    //private String processingCategory;
+    //private String destinationRateIndicator;
+    //private String rateIndicator;
+    //private String zone;
     private String poBoxIndicator;
     private String waiverOfSignature;
-    private String noWeekendHolidayDelivery;
+    //private String noWeekendHolidayDelivery;
     private double articleValue;
-    private double codAmountDueSender;
+    //private double codAmountDueSender;
     private BigDecimal handlingCharge = new BigDecimal(0.00);;
     private Vector<SpecialServiceVO> servicesList;
     private String duns;
     private String customerInternalReference;
     private String surchargeType;
     private BigDecimal surchargeAmount = new BigDecimal(0.00);;
-    private String nonIncidentalEnclosureRateIndicator;
-    private String nonIncidentalEnclosureClass;
-    private BigDecimal nonIncidentalEnclosurePostage = new BigDecimal(0.00);;
-    private double nonIncidentalEnclosureWeight;
-    private int customsDesignatedNumber;
+    //private String nonIncidentalEnclosureRateIndicator;
+    //private String nonIncidentalEnclosureClass;
+    //private BigDecimal nonIncidentalEnclosurePostage = new BigDecimal(0.00);;
+    //private double nonIncidentalEnclosureWeight;
+    //private int customsDesignatedNumber;
     private String corpDuns;
     private String dcDunsPkgidDzip;
     private String dcDuns;
@@ -95,7 +95,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 	private Calendar originalMailingDate;  // 17.0.0
     private String accountPeriod;
     private String fiscalYear;
-    private String statusFlag;
+    //private String statusFlag;
     private String month;
     private String monthlyFiscalYear;
     private String entryFacilityZip;
@@ -104,7 +104,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
     private int systemType;
     private boolean invalidDuns;
     private long postageStatementSequenceNumber;
-    private String errorDescription;
+    //private String errorDescription;
     //Jose de Castro - Added length, width, height, and dimensionalWeight per R-2006 Rate Case
     private double length;
     private double width;
@@ -131,11 +131,11 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
     // REL 17.1
     private BigDecimal publishedPostage = new BigDecimal(0.00);;
     private BigDecimal publishedTotalPostage = new BigDecimal(0.00);;
-    private ProductVO productVO;
+    //private ProductVO productVO;
     //private CustomDetail customDetail = new CustomDetail();
     private double mailerDimWeight;
     private double mailerWeight;
-    private String rateSchedule;
+    //private String rateSchedule;
     // REL18.0.0-DiscountSurcharge
 	private String evsWwsDiscountSurchargeType = Constants.DEFAULT_VALUE_EVS_DISCOUNT_SURCHARGE;
     //REL 18.1.0 CommercialPlus changes
@@ -143,9 +143,9 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
     //REL 19.0.0
     private String filteredMessage="";
     //REL21.0
-    private int warningType;
-    private String warningValue;
-    private String warningMessage="";
+    //private int warningType;
+    //private String warningValue;
+    //private String warningMessage="";
 	//REL23.0
 	private String corpPriceType;
 	private boolean roundUpHalfPound = true;
@@ -156,29 +156,39 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 	private String detailRecId;
 	private String stc;
 	private String barcodeConstruct;
+	public String getBarcodeConstruct() {
+		return barcodeConstruct;
+	}
+
+
+	public void setBarcodeConstruct(String barcodeConstruct) {
+		this.barcodeConstruct = barcodeConstruct;
+	}
+
+
 	private String destinationFacilityType;
 	private String postalCode;
-	private String carrierRoute;
+	//private String carrierRoute;
 	private String logisticsManagerMailer;
 	private String mailerOwnerMailerId;
-	private String containerId1;
-	private String containerType1;
-	private String containerId2;
-	private String containerType2;
-	private String containerId3;
-	private String containerType3;
+	//private String containerId1;
+	//private String containerType1;
+	//private String containerId2;
+	//private String containerType2;
+	//private String containerId3;
+	//private String containerType3;
 	private String mailerOwnerCRID;
-	private String fastReservationNumber;
-	private int fastScheduledInductionDate;
-	private int fastScheduledInducationTime;
+	//private String fastReservationNumber;
+	//private int fastScheduledInductionDate;
+	//private int fastScheduledInducationTime;
 	private int paymentAccountNumber;
 	private int paymentMethod;
 	private String postOfficeOfAccountZipCode;
 	private String meterSerialNumber;
 	private String chargeBackCode;
 	private String postageType;
-	private String CSSCNumber;
-	private String CSSCProductId;
+	//private String CSSCNumber;
+	//private String CSSCProductId;
 	private String discountType;
 	private double discountAmount;
 	private String nonIncidentalEnclosureProcessCat;
@@ -205,42 +215,42 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
    // private BigDecimal calcFeeEDA = new BigDecimal(0.0000);  /* REL 29.0 */
     private BigDecimal calcFeeFuel = new BigDecimal(0.0000); /* REL 29.0 */
     private BigDecimal calcFeePPI = new BigDecimal(0.0000);  /* REL 29.0 */
-    boolean zipEDA = false;  /* REL 29.0 */
-    boolean fuelFeeEnabled = false;  /* REL 29.0 */
+    //boolean zipEDA = false;  /* REL 29.0 */
+    //boolean fuelFeeEnabled = false;  /* REL 29.0 */
     private String tpbFlag = "N";   /* REL 30 */
     private String intlMailInd = "N"; /*REL 31 */
 
-    private String deliveryOptionIndicator="";  /* SRS 228 */
-    private String removalIndicator="";  /* SRS 228 */
-    private String overlabelIndicator="";  /* SRS 228 */
-    private String overlabelBarcodeConstructCode="";  /* SRS 228 */
-    private String overlabelNumber="";  /* SRS 228 */
+    //private String deliveryOptionIndicator="";  /* SRS 228 */
+    //private String removalIndicator="";  /* SRS 228 */
+    //private String overlabelIndicator="";  /* SRS 228 */
+    //private String overlabelBarcodeConstructCode="";  /* SRS 228 */
+    //private String overlabelNumber="";  /* SRS 228 */
     private String customerReferenceNumber2="";  /* SRS 228 */
-    private String recipientName="";  /* SRS 228 */
+    //private String recipientName="";  /* SRS 228 */
     private String deliveryAddress="";  /* SRS 228 */
-    private String ancillaryServiceEndorsement="";  /* SRS 228 */
-    private String addressServiceParticipantCode="";  /* SRS 228 */
+    //private String ancillaryServiceEndorsement="";  /* SRS 228 */
+    //private String addressServiceParticipantCode="";  /* SRS 228 */
     private String keyLine="";  /* SRS 228 */
     private String returnAddress="";  /* SRS 228 */
     private String returnAddressCity="";  /* SRS 228 */
     private String returnAddressState="";  /* SRS 228 */
     private String returnAddressZip="";  /* SRS 228 */
-    private String logisticMailingFacilityCRID="";  /* SRS 228 */
-    private String altPic=""; /* SRS 228 */
-    private String altDuns=""; /* SRS 228 */
-    private String altPkgId=""; /* SRS 228 */
-    private String altBarConstCode=""; /* SRS 228 */
-    private String altSource=""; /* SRS 228 */
-    private String altDunsPkgIdZip=""; /* SRS 228 */
+    //private String logisticMailingFacilityCRID="";  /* SRS 228 */
+    //private String altPic=""; /* SRS 228 */
+    //private String altDuns=""; /* SRS 228 */
+    //private String altPkgId=""; /* SRS 228 */
+    //private String altBarConstCode=""; /* SRS 228 */
+    //private String altSource=""; /* SRS 228 */
+    //private String altDunsPkgIdZip=""; /* SRS 228 */
     private String internationalProcessStatus=""; /* SRS 228 */
-    private String serialNumber=""; /* SRS 228 */
+    //private String serialNumber=""; /* SRS 228 */
     private String applicationIdentifier=""; /* SRS 228 */
     private String originCountryCode=""; /* SRS 228 */
     private int priceGroup; /* SRS 228 */
-    private String apsStatusIndicator;
-    private boolean updateOverlabel = false;	
+    //private String apsStatusIndicator;
+    //private boolean updateOverlabel = false;	
     //Release 34.0
-    private int convRateMapSeqNum;
+    //private int convRateMapSeqNum;
     private ArrayList<ByForVO> byForList;
     
     
@@ -248,13 +258,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
     public ManifestDetail() {
     }
 
-    // Release 34.0
-    public int getConvRateMapSeqNum() {
-        return convRateMapSeqNum;
-    }
-    public void setConvRateMapSeqNum(int number) {
-        this.convRateMapSeqNum = number;
-    }
+
     public int getSequenceNumber() {
         return sequenceNumber;
     }
@@ -431,37 +435,6 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
     	return this.postalRoutingBarcodeIndicator;
     }
     
-    public String getProcessingCategory() {
-        return processingCategory;
-    }
-
-    public void setProcessingCategory(String processingCategory) {
-        this.processingCategory = processingCategory;
-    }
-
-    public String getDestinationRateIndicator() {
-        return destinationRateIndicator;
-    }
-
-    public void setDestinationRateIndicator(String destinationRateIndicator) {
-        this.destinationRateIndicator = destinationRateIndicator;
-    }
-
-    public String getRateIndicator() {
-        return rateIndicator;
-    }
-
-    public void setRateIndicator(String rateIndicator) {
-        this.rateIndicator = rateIndicator;
-    }
-
-    public String getZone() {
-        return zone;
-    }
-
-    public void setZone(String zone) {
-        this.zone = zone;
-    }
 
     public String getPoBoxIndicator() {
         return poBoxIndicator;
@@ -479,14 +452,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
         this.waiverOfSignature = waiverOfSignature;
     }
 
-    public String getNoWeekendHolidayDelivery() {
-        return noWeekendHolidayDelivery;
-    }
-
-    public void setNoWeekendHolidayDelivery(String noWeekendHolidayDelivery) {
-        this.noWeekendHolidayDelivery = noWeekendHolidayDelivery;
-    }
-
+  
     public double getArticleValue() {
         return articleValue;
     }
@@ -495,14 +461,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
         this.articleValue = articleValue;
     }
 
-    public double getCodAmountDueSender() {
-        return codAmountDueSender;
-    }
-
-    public void setCodAmountDueSender(double codAmountDueSender) {
-        this.codAmountDueSender = codAmountDueSender;
-    }
-
+  
 	public String getDuns() {
         return duns;
     }
@@ -527,38 +486,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
         this.surchargeType = surchargeType;
     }
 
-    public String getNonIncidentalEnclosureRateIndicator() {
-        return nonIncidentalEnclosureRateIndicator;
-    }
-
-    public void setNonIncidentalEnclosureRateIndicator(String nonIncidentalEnclosureRateIndicator) {
-        this.nonIncidentalEnclosureRateIndicator = nonIncidentalEnclosureRateIndicator;
-    }
-
-    public String getNonIncidentalEnclosureClass() {
-        return nonIncidentalEnclosureClass;
-    }
-
-    public void setNonIncidentalEnclosureClass(String nonIncidentalEnclosureClass) {
-        this.nonIncidentalEnclosureClass = nonIncidentalEnclosureClass;
-    }
-
-    public double getNonIncidentalEnclosureWeight() {
-        return nonIncidentalEnclosureWeight;
-    }
-
-    public void setNonIncidentalEnclosureWeight(double nonIncidentalEnclosureWeight) {
-        this.nonIncidentalEnclosureWeight = nonIncidentalEnclosureWeight;
-    }
-
-    public int getCustomsDesignatedNumber() {
-        return customsDesignatedNumber;
-    }
-
-    public void setCustomsDesignatedNumber(int customsDesignatedNumber) {
-        this.customsDesignatedNumber = customsDesignatedNumber;
-    }
-
+   
     public String getCorpDuns() {
         return corpDuns;
     }
@@ -615,14 +543,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
         this.fiscalYear = fiscalYear;
     }
 
-    public String getStatusFlag() {
-        return statusFlag;
-    }
-
-    public void setStatusFlag(String statusFlag) {
-        this.statusFlag = statusFlag;
-    }
-
+   
     public String getMonth() {
         return month;
     }
@@ -698,140 +619,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 		this.servicesList = servicesList;
 	}
 	
-	@Override
-	public String toString() {
-		return "ManifestDetail [sequenceNumber=" + sequenceNumber
-				+ ", picCode=" + picCode + ", fileNumber=" + fileNumber
-				+ ", subFileNumber=" + subFileNumber + ", classOfMail="
-				+ classOfMail + ", destinationZip=" + destinationZip
-				+ ", destinationZipPlus4=" + destinationZipPlus4
-				+ ", countryCode=" + countryCode + ", postage=" + postage
-				+ ", totalPostage=" + totalPostage + ", uomCode=" + uomCode
-				+ ", weight=" + weight + ", processingCategory="
-				+ processingCategory + ", destinationRateIndicator="
-				+ destinationRateIndicator + ", rateIndicator=" + rateIndicator
-				+ ", zone=" + zone + ", poBoxIndicator=" + poBoxIndicator
-				+ ", waiverOfSignature=" + waiverOfSignature
-				+ ", noWeekendHolidayDelivery=" + noWeekendHolidayDelivery
-				+ ", articleValue=" + articleValue + ", codAmountDueSender="
-				+ codAmountDueSender + ", handlingCharge=" + handlingCharge
-				+ ", servicesList=" + servicesList + ", duns=" + duns
-				+ ", customerInternalReference=" + customerInternalReference
-				+ ", surchargeType=" + surchargeType + ", surchargeAmount="
-				+ surchargeAmount + ", nonIncidentalEnclosureRateIndicator="
-				+ nonIncidentalEnclosureRateIndicator
-				+ ", nonIncidentalEnclosureClass="
-				+ nonIncidentalEnclosureClass
-				+ ", nonIncidentalEnclosurePostage="
-				+ nonIncidentalEnclosurePostage
-				+ ", nonIncidentalEnclosureWeight="
-				+ nonIncidentalEnclosureWeight + ", customsDesignatedNumber="
-				+ customsDesignatedNumber + ", corpDuns=" + corpDuns
-				+ ", dcDunsPkgidDzip=" + dcDunsPkgidDzip + ", dcDuns=" + dcDuns
-				+ ", dcPkgid=" + dcPkgid + ", mailingDate=" + mailingDate
-				+ ", originalMailingDate=" + originalMailingDate
-				+ ", accountPeriod=" + accountPeriod + ", fiscalYear="
-				+ fiscalYear + ", statusFlag=" + statusFlag + ", month="
-				+ month + ", monthlyFiscalYear=" + monthlyFiscalYear
-				+ ", entryFacilityZip=" + entryFacilityZip + ", filteredType="
-				+ filteredType + ", serviceTypeCode=" + serviceTypeCode
-				+ ", systemType=" + systemType + ", invalidDuns=" + invalidDuns
-				+ ", postageStatementSequenceNumber="
-				+ postageStatementSequenceNumber + ", errorDescription="
-				+ errorDescription + ", length=" + length + ", width=" + width
-				+ ", height=" + height + ", dimensionalWeight="
-				+ dimensionalWeight + ", postalRoutingBarcodeIndicator="
-				+ postalRoutingBarcodeIndicator + ", calculatedPostage="
-				+ calculatedPostage + ", calculatedTotalPostage="
-				+ calculatedTotalPostage + ", calculatedSurcharge="
-				+ calculatedSurcharge + ", postageDifference="
-				+ postageDifference + ", calculatedServicesList="
-				+ calculatedServicesList + ", mailerMailClass="
-				+ mailerMailClass + ", mailerDestRateInd=" + mailerDestRateInd
-				+ ", mailerRateInd=" + mailerRateInd + ", mailerProcessCat="
-				+ mailerProcessCat + ", mailerZone=" + mailerZone
-				+ ", mailerRoutingBarcode=" + mailerRoutingBarcode
-				+ ", mailerSurchargeType=" + mailerSurchargeType
-				+ ", rateIngredModInd=" + rateIngredModInd
-				+ ", isDimWeightUsed=" + isDimWeightUsed
-				+ ", publishedPostage=" + publishedPostage
-				+ ", publishedTotalPostage=" + publishedTotalPostage
-				+ ", productVO=" + productVO + ", mailerDimWeight="
-				+ mailerDimWeight + ", mailerWeight=" + mailerWeight
-				+ ", rateSchedule=" + rateSchedule
-				+ ", evsWwsDiscountSurchargeType="
-				+ evsWwsDiscountSurchargeType + ", priceType=" + priceType
-				+ ", filteredMessage=" + filteredMessage + ", warningType="
-				+ warningType + ", warningValue=" + warningValue
-				+ ", warningMessage=" + warningMessage + ", corpPriceType="
-				+ corpPriceType + ", roundUpHalfPound=" + roundUpHalfPound
-				+ ", tier=" + tier + ", eFileVersionNumber="
-				+ eFileVersionNumber + ", detailRecId=" + detailRecId
-				+ ", stc=" + stc + ", barcodeConstruct=" + barcodeConstruct
-				+ ", destinationFacilityType=" + destinationFacilityType
-				+ ", postalCode=" + postalCode + ", carrierRoute="
-				+ carrierRoute + ", logisticsManagerMailer="
-				+ logisticsManagerMailer + ", mailerOwnerMailerId="
-				+ mailerOwnerMailerId + ", containerId1=" + containerId1
-				+ ", containerType1=" + containerType1 + ", containerId2="
-				+ containerId2 + ", containerType2=" + containerType2
-				+ ", containerId3=" + containerId3 + ", containerType3="
-				+ containerType3 + ", mailerOwnerCRID=" + mailerOwnerCRID
-				+ ", fastReservationNumber=" + fastReservationNumber
-				+ ", fastScheduledInductionDate=" + fastScheduledInductionDate
-				+ ", fastScheduledInducationTime="
-				+ fastScheduledInducationTime + ", paymentAccountNumber="
-				+ paymentAccountNumber + ", paymentMethod=" + paymentMethod
-				+ ", postOfficeOfAccountZipCode=" + postOfficeOfAccountZipCode
-				+ ", meterSerialNumber=" + meterSerialNumber
-				+ ", chargeBackCode=" + chargeBackCode + ", postageType="
-				+ postageType + ", CSSCNumber=" + CSSCNumber
-				+ ", CSSCProductId=" + CSSCProductId + ", discountType="
-				+ discountType + ", discountAmount=" + discountAmount
-				+ ", nonIncidentalEnclosureProcessCat="
-				+ nonIncidentalEnclosureProcessCat
-				+ ", openDistributedContentsInd=" + openDistributedContentsInd
-				+ ", filler=" + filler + ", metricsSeqNo=" + metricsSeqNo
-				+ ", manifestedSurchargeType=" + manifestedSurchargeType
-				+ ", manifestedSurchargeAmount=" + manifestedSurchargeAmount
-				+ ", validPermit=" + validPermit + ", duplicateFlag="
-				+ duplicateFlag + ", financeNumber=" + financeNumber
-				+ ", referrer=" + referrer + ", psGroupNo=" + psGroupNo
-				+ ", lineNumber=" + lineNumber + ", destinationDeliveryPoint="
-				+ destinationDeliveryPoint + ", formType=" + formType
-				+ ", wwsProcessingCategory=" + wwsProcessingCategory
-				+ ", calcFeeFuel=" + calcFeeFuel + ", calcFeePPI=" + calcFeePPI
-				+ ", zipEDA=" + zipEDA + ", fuelFeeEnabled=" + fuelFeeEnabled
-				+ ", tpbFlag=" + tpbFlag + ", intlMailInd=" + intlMailInd
-				+ ", deliveryOptionIndicator=" + deliveryOptionIndicator
-				+ ", removalIndicator=" + removalIndicator
-				+ ", overlabelIndicator=" + overlabelIndicator
-				+ ", overlabelBarcodeConstructCode="
-				+ overlabelBarcodeConstructCode + ", overlabelNumber="
-				+ overlabelNumber + ", customerReferenceNumber2="
-				+ customerReferenceNumber2 + ", recipientName=" + recipientName
-				+ ", deliveryAddress=" + deliveryAddress
-				+ ", ancillaryServiceEndorsement="
-				+ ancillaryServiceEndorsement
-				+ ", addressServiceParticipantCode="
-				+ addressServiceParticipantCode + ", keyLine=" + keyLine
-				+ ", returnAddress=" + returnAddress + ", returnAddressCity="
-				+ returnAddressCity + ", returnAddressState="
-				+ returnAddressState + ", returnAddressZip=" + returnAddressZip
-				+ ", logisticMailingFacilityCRID="
-				+ logisticMailingFacilityCRID + ", altPic=" + altPic
-				+ ", altDuns=" + altDuns + ", altPkgId=" + altPkgId
-				+ ", altBarConstCode=" + altBarConstCode + ", altSource="
-				+ altSource + ", altDunsPkgIdZip=" + altDunsPkgIdZip
-				+ ", internationalProcessStatus=" + internationalProcessStatus
-				+ ", serialNumber=" + serialNumber + ", applicationIdentifier="
-				+ applicationIdentifier + ", originCountryCode="
-				+ originCountryCode + ", priceGroup=" + priceGroup
-				+ ", apsStatusIndicator=" + apsStatusIndicator
-				+ ", updateOverlabel=" + updateOverlabel
-				+ ", convRateMapSeqNum=" + convRateMapSeqNum + ", byForList="
-				+ byForList + "]";
-	}
+	
 
 	public BigDecimal getCalculatedServicesCost() {
 		
@@ -845,13 +633,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 		return DataTypes.format(cost);
 	}
 
-	public String getErrorDescription() {
-		return errorDescription;
-	}
-
-	public void setErrorDescription(String errorMessage) {
-		this.errorDescription = errorMessage;
-	}
+	
 
 	public long getPostageStatementSequenceNumber() {
 		return postageStatementSequenceNumber;
@@ -886,14 +668,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 		this.handlingCharge = handlingCharge;
 	}
 
-	public BigDecimal getNonIncidentalEnclosurePostage() {
-		return nonIncidentalEnclosurePostage;
-	}
-
-	public void setNonIncidentalEnclosurePostage(
-			BigDecimal nonIncidentalEnclosurePostage) {
-		this.nonIncidentalEnclosurePostage = nonIncidentalEnclosurePostage;
-	}
+	
 
 	public BigDecimal getPostage() {
 		return postage;
@@ -1054,20 +829,6 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 
 	// 17.1.0
 	
-	/**
-	 * @return
-	 */
-	public ProductVO getProductVO() {
-		return productVO;
-	}
-
-	/**
-	 * @param productVO
-	 */
-	public void setProductVO(ProductVO productVO) {
-		this.productVO = productVO;
-	}
-
 //	/**
 //	 * @return
 //	 */
@@ -1169,19 +930,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 		mailerWeight = d;
 	}
 
-	/**
-	 * @return
-	 */
-	public String getRateSchedule() {
-		return rateSchedule;
-	}
-
-	/**
-	 * @param string
-	 */
-	public void setRateSchedule(String string) {
-		rateSchedule = string;
-	}
+	
 
 	/**
 	 * @return
@@ -1239,47 +988,6 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 		filteredMessage = string;
 	}
 
-	/**
-	 * @return
-	 */
-	public String getWarningMessage() {
-		return warningMessage;
-	}
-
-	/**
-	 * @return
-	 */
-	public int getWarningType() {
-		return warningType;
-	}
-
-	/**
-	 * @return
-	 */
-	public String getWarningValue() {
-		return warningValue;
-	}
-
-	/**
-	 * @param string
-	 */
-	public void setWarningMessage(String string) {
-		warningMessage = string;
-	}
-
-	/**
-	 * @param string
-	 */
-	public void setWarningType(int num) {
-		warningType = num;
-	}
-
-	/**
-	 * @param string
-	 */
-	public void setWarningValue(String string) {
-		warningValue = string;
-	}
 
 	public String getDunsPkgid() { //REL22.0.X
 		return dcDunsPkgidDzip;
@@ -1359,19 +1067,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 
 	/* Beginning Of REL24.0 Methods */
 	
-	/**
-	 * @return
-	 */
-	public String getBarcodeConstruct() {
-		return barcodeConstruct;
-	}
-
-	/**
-	 * @return
-	 */
-	public String getCarrierRoute() {
-		return carrierRoute;
-	}
+	
 
 	/**
 	 * @return
@@ -1380,61 +1076,9 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 		return chargeBackCode;
 	}
 
-	/**
-	 * @return
-	 */
-	public String getContainerId1() {
-		return containerId1;
-	}
 
-	/**
-	 * @return
-	 */
-	public String getContainerId2() {
-		return containerId2;
-	}
 
-	/**
-	 * @return
-	 */
-	public String getContainerId3() {
-		return containerId3;
-	}
 
-	/**
-	 * @return
-	 */
-	public String getContainerType1() {
-		return containerType1;
-	}
-
-	/**
-	 * @return
-	 */
-	public String getContainerType2() {
-		return containerType2;
-	}
-
-	/**
-	 * @return
-	 */
-	public String getContainerType3() {
-		return containerType3;
-	}
-
-	/**
-	 * @return
-	 */
-	public String getCSSCNumber() {
-		return CSSCNumber;
-	}
-
-	/**
-	 * @return
-	 */
-	public String getCSSCProductId() {
-		return CSSCProductId;
-	}
 
 	/**
 	 * @return
@@ -1464,26 +1108,6 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 		return discountType;
 	}
 
-	/**
-	 * @return
-	 */
-	public String getFastReservationNumber() {
-		return fastReservationNumber;
-	}
-
-	/**
-	 * @return
-	 */
-	public int getFastScheduledInducationTime() {
-		return fastScheduledInducationTime;
-	}
-
-	/**
-	 * @return
-	 */
-	public int getFastScheduledInductionDate() {
-		return fastScheduledInductionDate;
-	}
 
 	/**
 	 * @return
@@ -1576,22 +1200,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 		return stc;
 	}
 
-	/**
-	 * @param string
-	 */
-	public void setBarcodeConstruct(String string) {
-		if(string != null){
-			barcodeConstruct = string.trim();
-		}
-	}
-
-	/**
-	 * @param string
-	 */
-	public void setCarrierRoute(String string) {
-		carrierRoute = string;
-	}
-
+	
 	/**
 	 * @param string
 	 */
@@ -1599,61 +1208,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 		chargeBackCode = string;
 	}
 
-	/**
-	 * @param i
-	 */
-	public void setContainerId1(String i) {
-		containerId1 = i;
-	}
-
-	/**
-	 * @param i
-	 */
-	public void setContainerId2(String i) {
-		containerId2 = i;
-	}
-
-	/**
-	 * @param i
-	 */
-	public void setContainerId3(String i) {
-		containerId3 = i;
-	}
-
-	/**
-	 * @param string
-	 */
-	public void setContainerType1(String string) {
-		containerType1 = string;
-	}
-
-	/**
-	 * @param string
-	 */
-	public void setContainerType2(String string) {
-		containerType2 = string;
-	}
-
-	/**
-	 * @param string
-	 */
-	public void setContainerType3(String string) {
-		containerType3 = string;
-	}
-
-	/**
-	 * @param string
-	 */
-	public void setCSSCNumber(String string) {
-		CSSCNumber = string;
-	}
-
-	/**
-	 * @param string
-	 */
-	public void setCSSCProductId(String string) {
-		CSSCProductId = string;
-	}
+	
 
 	/**
 	 * @param string
@@ -1683,26 +1238,6 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 		discountType = string;
 	}
 
-	/**
-	 * @param string
-	 */
-	public void setFastReservationNumber(String string) {
-		fastReservationNumber = string;
-	}
-
-	/**
-	 * @param i
-	 */
-	public void setFastScheduledInducationTime(int i) {
-		fastScheduledInducationTime = i;
-	}
-
-	/**
-	 * @param i
-	 */
-	public void setFastScheduledInductionDate(int i) {
-		fastScheduledInductionDate = i;
-	}
 
 	/**
 	 * @param string
@@ -1959,22 +1494,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 		this.calcFeePPI = calcFeePPI;
 	}
 
-	public boolean isZipEDA() {
-		return zipEDA;
-	}
-
-	public void setZipEDA(boolean zipEDA) {
-		this.zipEDA = zipEDA;
-	}
-
-	public boolean isFuelFeeEnabled() {
-		return fuelFeeEnabled;
-	}
-
-	public void setFuelFeeEnabled(boolean fuelFeeEnabled) {
-		this.fuelFeeEnabled = fuelFeeEnabled;
-	}
-
+	
 	public BigDecimal getPublishedTotalPostage() {
 		return publishedTotalPostage;
 	}
@@ -2019,44 +1539,9 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 		this.intlMailInd = intlMailInd;
 	}	
 	
-    public String getDeliveryOptionIndicator() {
-    	return deliveryOptionIndicator;
-    }
-    public void setDeliveryOptionIndicator(String deliveryOptionIndicator) {
-    	this.deliveryOptionIndicator = deliveryOptionIndicator;
-    }
+   
 
-    public String getRemovalIndicator() {
-    	return removalIndicator;
-    }
-
-    public void setRemovalIndicator(String removalIndicator) {
-    	this.removalIndicator = removalIndicator;
-    }
-
-    public String getOverlabelIndicator() {
-    	return overlabelIndicator;
-    }
-
-    public void setOverlabelIndicator(String overlabelIndicator) {
-    	this.overlabelIndicator = overlabelIndicator;
-    }
-
-    public String getOverlabelBarcodeConstructCode() {
-    	return overlabelBarcodeConstructCode;
-    }
-
-    public void setOverlabelBarcodeConstructCode(String overlabelBarcodeConstructCode) {
-    	this.overlabelBarcodeConstructCode = overlabelBarcodeConstructCode;
-    }
-
-    public String getOverlabelNumber() {
-    	return overlabelNumber;
-    }
-
-    public void setOverlabelNumber(String overlabelNumber) {
-    	this.overlabelNumber = overlabelNumber;
-    }
+   
 
     public String getCustomerReferenceNumber2() {
     	return customerReferenceNumber2;
@@ -2066,13 +1551,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
     	this.customerReferenceNumber2 = customerReferenceNumber2;
     }
 
-    public String getRecipientName() {
-    	return recipientName;
-    }
-
-    public void setRecipientName(String recipientName) {
-    	this.recipientName = recipientName;
-    }
+ 
 
     public String getDeliveryAddress() {
     	return deliveryAddress;
@@ -2082,22 +1561,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
     	this.deliveryAddress = deliveryAddress;
     }
 
-    public String getAncillaryServiceEndorsement() {
-    	return ancillaryServiceEndorsement;
-    }
-
-    public void setAncillaryServiceEndorsement(String ancillaryServiceEndorsement) {
-    	this.ancillaryServiceEndorsement = ancillaryServiceEndorsement;
-    }
-
-    public String getAddressServiceParticipantCode() {
-    	return addressServiceParticipantCode;
-    }
-
-    public void setAddressServiceParticipantCode(String addressServiceParticipantCode) {
-    	this.addressServiceParticipantCode = addressServiceParticipantCode;
-    }
-
+  
     public String getKeyLine() {
     	return keyLine;
     }
@@ -2138,53 +1602,8 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
     	this.returnAddressZip =  returnAddressZip;
     }
 
-    public String getLogisticMailingFacilityCRID() {
-    	return logisticMailingFacilityCRID;
-    }
+  
 
-    public void setLogisticMailingFacilityCRID(String logisticsMailingFacilityCRID) {
-    	this.logisticMailingFacilityCRID = logisticsMailingFacilityCRID;
-    }
-
-	public String getAltPic() {
-		return altPic;
-	}
-
-	public void setAltPic(String altPic) {
-		this.altPic = altPic;
-	}
-
-	public String getAltDuns() {
-		return altDuns;
-	}
-
-	public void setAltDuns(String altDuns) {
-		this.altDuns = altDuns;
-	}
-
-	public String getAltPkgId() {
-		return altPkgId;
-	}
-
-	public void setAltPkgId(String altPkgId) {
-		this.altPkgId = altPkgId;
-	}
-
-	public String getAltBarConstCode() {
-		return altBarConstCode;
-	}
-
-	public void setAltBarConstCode(String altBarConstCode) {
-		this.altBarConstCode = altBarConstCode;
-	}
-
-	public String getAltSource() {
-		return altSource;
-	}
-
-	public void setAltSource(String altSource) {
-		this.altSource = altSource;
-	}
 	
     public void setInternationalProcessStatus(String internationalProcessStatus) {
     	this.internationalProcessStatus = internationalProcessStatus;
@@ -2194,13 +1613,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
     	return internationalProcessStatus;
     }
     
-    public String getSerialNumber() {
-    	return serialNumber;
-    }
-    
-    public void setSerialNumber(String serialNumber) {
-    	this.serialNumber = serialNumber;
-    }
+  
     
     public String getApplicationIdentifier() {
     	return applicationIdentifier;
@@ -2227,31 +1640,7 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 	}
 
 
-	public void setAltDunsPkgIdZip(String altDunsPkgIdZip) {
-		this.altDunsPkgIdZip = altDunsPkgIdZip;
-	}
 	
-	public String getAltDunsPkgIdZip() {
-		return altDunsPkgIdZip;
-	}
-
-	public String getApsStatusIndicator() {
-		return apsStatusIndicator;
-	}
-
-	public void setApsStatusIndicator(String apsStatusIndicator) {
-		this.apsStatusIndicator = apsStatusIndicator;
-	}
-
-	public boolean isUpdateOverlabel() {
-		return updateOverlabel;
-	}
-
-	public void setUpdateOverlabel(boolean updateOverlabel) {
-		this.updateOverlabel = updateOverlabel;
-	}
-	
-    
     public List<String> getExtraServiceCodesList() {
     	List<String> retList = new ArrayList<String>();
     	if(null != this.getServicesList() && this.getServicesList().size()>0) {
@@ -2270,6 +1659,217 @@ public class ManifestDetail implements CommonAttributes, DetailRateI, ContractPa
 
 	public ArrayList<ByForVO> getByForList() {
 		return byForList;
+	}
+
+
+	@Override
+	public String getProcessingCategory() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public String getDestinationRateIndicator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public String getRateIndicator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public String getZone() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public ProductVO getProductVO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public String getRateSchedule() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public void setProcessingCategory(String s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void setDestinationRateIndicator(String s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void setRateIndicator(String s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void setZone(String s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void setProductVO(ProductVO productVO) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void setRateSchedule(String d) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public boolean isZipEDA() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	@Override
+	public void setZipEDA(boolean zipEDA) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public boolean isFuelFeeEnabled() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	@Override
+	public void setFuelFeeEnabled(boolean fuelFeeEnabled) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public double getCodAmountDueSender() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public String toString() {
+		return "ManifestDetail [sequenceNumber=" + sequenceNumber
+				+ ", picCode=" + picCode + ", fileNumber=" + fileNumber
+				+ ", subFileNumber=" + subFileNumber + ", classOfMail="
+				+ classOfMail + ", destinationZip=" + destinationZip
+				+ ", destinationZipPlus4=" + destinationZipPlus4
+				+ ", countryCode=" + countryCode + ", postage=" + postage
+				+ ", totalPostage=" + totalPostage + ", uomCode=" + uomCode
+				+ ", weight=" + weight + ", poBoxIndicator=" + poBoxIndicator
+				+ ", waiverOfSignature=" + waiverOfSignature
+				+ ", articleValue=" + articleValue + ", handlingCharge="
+				+ handlingCharge + ", servicesList=" + servicesList + ", duns="
+				+ duns + ", customerInternalReference="
+				+ customerInternalReference + ", surchargeType="
+				+ surchargeType + ", surchargeAmount=" + surchargeAmount
+				+ ", corpDuns=" + corpDuns + ", dcDunsPkgidDzip="
+				+ dcDunsPkgidDzip + ", dcDuns=" + dcDuns + ", dcPkgid="
+				+ dcPkgid + ", mailingDate=" + mailingDate
+				+ ", originalMailingDate=" + originalMailingDate
+				+ ", accountPeriod=" + accountPeriod + ", fiscalYear="
+				+ fiscalYear + ", month=" + month + ", monthlyFiscalYear="
+				+ monthlyFiscalYear + ", entryFacilityZip=" + entryFacilityZip
+				+ ", filteredType=" + filteredType + ", serviceTypeCode="
+				+ serviceTypeCode + ", systemType=" + systemType
+				+ ", invalidDuns=" + invalidDuns
+				+ ", postageStatementSequenceNumber="
+				+ postageStatementSequenceNumber + ", length=" + length
+				+ ", width=" + width + ", height=" + height
+				+ ", dimensionalWeight=" + dimensionalWeight
+				+ ", postalRoutingBarcodeIndicator="
+				+ postalRoutingBarcodeIndicator + ", calculatedPostage="
+				+ calculatedPostage + ", calculatedTotalPostage="
+				+ calculatedTotalPostage + ", calculatedSurcharge="
+				+ calculatedSurcharge + ", postageDifference="
+				+ postageDifference + ", calculatedServicesList="
+				+ calculatedServicesList + ", mailerMailClass="
+				+ mailerMailClass + ", mailerDestRateInd=" + mailerDestRateInd
+				+ ", mailerRateInd=" + mailerRateInd + ", mailerProcessCat="
+				+ mailerProcessCat + ", mailerZone=" + mailerZone
+				+ ", mailerRoutingBarcode=" + mailerRoutingBarcode
+				+ ", mailerSurchargeType=" + mailerSurchargeType
+				+ ", rateIngredModInd=" + rateIngredModInd
+				+ ", isDimWeightUsed=" + isDimWeightUsed
+				+ ", publishedPostage=" + publishedPostage
+				+ ", publishedTotalPostage=" + publishedTotalPostage
+				+ ", mailerDimWeight=" + mailerDimWeight + ", mailerWeight="
+				+ mailerWeight + ", evsWwsDiscountSurchargeType="
+				+ evsWwsDiscountSurchargeType + ", priceType=" + priceType
+				+ ", filteredMessage=" + filteredMessage + ", corpPriceType="
+				+ corpPriceType + ", roundUpHalfPound=" + roundUpHalfPound
+				+ ", tier=" + tier + ", eFileVersionNumber="
+				+ eFileVersionNumber + ", detailRecId=" + detailRecId
+				+ ", stc=" + stc + ", barcodeConstruct=" + barcodeConstruct
+				+ ", destinationFacilityType=" + destinationFacilityType
+				+ ", postalCode=" + postalCode + ", logisticsManagerMailer="
+				+ logisticsManagerMailer + ", mailerOwnerMailerId="
+				+ mailerOwnerMailerId + ", mailerOwnerCRID=" + mailerOwnerCRID
+				+ ", paymentAccountNumber=" + paymentAccountNumber
+				+ ", paymentMethod=" + paymentMethod
+				+ ", postOfficeOfAccountZipCode=" + postOfficeOfAccountZipCode
+				+ ", meterSerialNumber=" + meterSerialNumber
+				+ ", chargeBackCode=" + chargeBackCode + ", postageType="
+				+ postageType + ", discountType=" + discountType
+				+ ", discountAmount=" + discountAmount
+				+ ", nonIncidentalEnclosureProcessCat="
+				+ nonIncidentalEnclosureProcessCat
+				+ ", openDistributedContentsInd=" + openDistributedContentsInd
+				+ ", filler=" + filler + ", metricsSeqNo=" + metricsSeqNo
+				+ ", manifestedSurchargeType=" + manifestedSurchargeType
+				+ ", manifestedSurchargeAmount=" + manifestedSurchargeAmount
+				+ ", validPermit=" + validPermit + ", duplicateFlag="
+				+ duplicateFlag + ", financeNumber=" + financeNumber
+				+ ", referrer=" + referrer + ", psGroupNo=" + psGroupNo
+				+ ", lineNumber=" + lineNumber + ", destinationDeliveryPoint="
+				+ destinationDeliveryPoint + ", formType=" + formType
+				+ ", wwsProcessingCategory=" + wwsProcessingCategory
+				+ ", calcFeeFuel=" + calcFeeFuel + ", calcFeePPI=" + calcFeePPI
+				+ ", tpbFlag=" + tpbFlag + ", intlMailInd=" + intlMailInd
+				+ ", customerReferenceNumber2=" + customerReferenceNumber2
+				+ ", deliveryAddress=" + deliveryAddress + ", keyLine="
+				+ keyLine + ", returnAddress=" + returnAddress
+				+ ", returnAddressCity=" + returnAddressCity
+				+ ", returnAddressState=" + returnAddressState
+				+ ", returnAddressZip=" + returnAddressZip
+				+ ", internationalProcessStatus=" + internationalProcessStatus
+				+ ", applicationIdentifier=" + applicationIdentifier
+				+ ", originCountryCode=" + originCountryCode + ", priceGroup="
+				+ priceGroup + ", byForList=" + byForList + "]";
 	}
 	
 	
