@@ -33,17 +33,17 @@ public class ManifestDetailProcessor {
 				detail.setDcPkgid(picVo.getPackageID());
 				detail.setServiceTypeCode(picVo.getServiceTypeCode());
 				detail.setDcDunsPkgidDzip(picVo.getDunsPkgidDzip());
-				detail.setSerialNumber(picVo.getSerialNumber());
+				//detail.setSerialNumber(picVo.getSerialNumber());
 				detail.setApplicationIdentifier(picVo.getApplicationIdentifier());
 				// the following needs to be set because it is referenced in ManifestDetailRawValidatorV20
 //				detailRawLine.setApplicationIdentifier(picVo.getApplicationIdentifier());
 				detail.setOriginCountryCode(picVo.getOriginCountryCode());
-				detail.setAltPkgId(picVo.getAlternatePackageID());
+				/*detail.setAltPkgId(picVo.getAlternatePackageID());
 				detail.setAltDuns(picVo.getAlternateDuns());
 				detail.setAltPic(picVo.getAlternatePicCode());
 				detail.setAltPkgId(picVo.getAlternatePackageID());
 				detail.setAltDunsPkgIdZip(picVo.getAlternateDunsPkgidDzip());
-				detail.setAltBarConstCode(picVo.getAlternateBarCodeContruct());
+				detail.setAltBarConstCode(picVo.getAlternateBarCodeContruct());*/
 			}
 		 
 			/**
@@ -106,9 +106,9 @@ public class ManifestDetailProcessor {
 			detail.setZone(detailRawLine.getZone().trim());
 //			detail.setPoBoxIndicator(detailRawLine.getPoBoxIndicator().trim());
 //			detail.setWaiverOfSignature(detailRawLine.getWaiverOfSignature().trim());
-			detail.setNoWeekendHolidayDelivery(detailRawLine.getNoWeekendHolidayDelivery().trim());
+			//detail.setNoWeekendHolidayDelivery(detailRawLine.getNoWeekendHolidayDelivery().trim());
 			detail.setArticleValue(DataTypes.toDouble(detailRawLine.getArticleValue().trim(), 2));
-			detail.setCodAmountDueSender(DataTypes.toDouble(detailRawLine.getCodAmountDueSender().trim(), 2));
+			//detail.setCodAmountDueSender(DataTypes.toDouble(detailRawLine.getCodAmountDueSender().trim(), 2));
 			detail.setHandlingCharge(DataTypes.toBigDecimal(detailRawLine.getHandlingCharge().trim(), 2));
 	        
 			// PARSE THE SERVICE LIST FROM LINE CREATING VECTOR OF SERVICELIST VOs
@@ -132,10 +132,10 @@ public class ManifestDetailProcessor {
 			detail.setCustomerInternalReference(detailRawLine.getCustomerInternalReference().trim());
 			detail.setSurchargeType(detailRawLine.getSurchargeType().trim());  
 			detail.setSurchargeAmount(DataTypes.toBigDecimal(detailRawLine.getSurchargeAmount().trim(), 3)); 
-			detail.setNonIncidentalEnclosureClass(detailRawLine.getNonIncidentalEnclosureClass().trim());
+			/*detail.setNonIncidentalEnclosureClass(detailRawLine.getNonIncidentalEnclosureClass().trim());
 			detail.setNonIncidentalEnclosureRateIndicator(detailRawLine.getNonIncidentalEnclosureRateIndicator()); 
 			detail.setNonIncidentalEnclosurePostage(DataTypes.toBigDecimal(detailRawLine.getNonIncidentalEnclosurePostage().trim(), 3));
-			detail.setNonIncidentalEnclosureWeight(DataTypes.toDouble(detailRawLine.getNonIncidentalEnclosureWeight().trim(), 4));
+			detail.setNonIncidentalEnclosureWeight(DataTypes.toDouble(detailRawLine.getNonIncidentalEnclosureWeight().trim(), 4));*/
 //			detail.setCustomsDesignatedNumber(DataTypes.toInteger(detailRawLine.getCustomsDesignatedNumber().trim()));
 			detail.setPostalRoutingBarcodeIndicator(detailRawLine.getPostalRoutingBarcodeIndicator().trim());
 			detail.setFilteredType(detailRawLine.getFilteredType());
@@ -153,38 +153,38 @@ public class ManifestDetailProcessor {
 			detail.setMailerZone(detail.getZone());
 
 			//REL21.0
-			detail.setWarningType(detailRawLine.getWarningType());
+			/*detail.setWarningType(detailRawLine.getWarningType());
 			detail.setWarningValue(detailRawLine.getWarningValue());
-			detail.setWarningMessage(detailRawLine.getWarningMessage());
+			detail.setWarningMessage(detailRawLine.getWarningMessage());*/
 			
 			
 			// take the rest of 1.5 field
 			detail.setDetailRecId(detailRawLine.getDetailRecId());
 			detail.setStc(detailRawLine.getStc());
-			detail.setBarcodeConstruct(detailRawLine.getBarcodeConstruct());
+			//detail.setBarcodeConstruct(detailRawLine.getBarcodeConstruct());
 			detail.setDestinationFacilityType(detailRawLine.getDestinationFacilityType());
 			detail.setPostalCode(detailRawLine.getPostalCode());
-			detail.setCarrierRoute(detailRawLine.getCarrierRoute());
+			//detail.setCarrierRoute(detailRawLine.getCarrierRoute());
 			detail.setLogisticsManagerMailer(detailRawLine.getLogisticsManagerMailer());
 			detail.setMailerOwnerMailerId(detailRawLine.getMailerOwnerMailerId());
-			detail.setContainerId1(detailRawLine.getContainerId1());
+			/*detail.setContainerId1(detailRawLine.getContainerId1());
 			detail.setContainerType1(detailRawLine.getContainerType1());
 			detail.setContainerId2(detailRawLine.getContainerId2());
 			detail.setContainerType2(detailRawLine.getContainerType2());
 			detail.setContainerId3(detailRawLine.getContainerId3());
 			detail.setContainerType3(detailRawLine.getContainerType3());
-			detail.setMailerOwnerCRID(detailRawLine.getMailerOwnerCRID());
-			detail.setFastReservationNumber(detailRawLine.getFastReservationNumber());
+*/			detail.setMailerOwnerCRID(detailRawLine.getMailerOwnerCRID());
+			/*detail.setFastReservationNumber(detailRawLine.getFastReservationNumber());
 			detail.setFastScheduledInductionDate(DataTypes.toInteger(detailRawLine.getFastScheduledInductionDate()));
-			detail.setFastScheduledInducationTime(DataTypes.toInteger(detailRawLine.getFastScheduledInducationTime()));
+			detail.setFastScheduledInducationTime(DataTypes.toInteger(detailRawLine.getFastScheduledInducationTime()));*/
 			detail.setPaymentAccountNumber(DataTypes.toInteger(detailRawLine.getPaymentAccountNumber()));
 			detail.setPaymentMethod(DataTypes.toInteger(detailRawLine.getMethodPayment()));
 			detail.setPostOfficeOfAccountZipCode(detailRawLine.getPostOfficeAccountZip());
 			detail.setMeterSerialNumber(detailRawLine.getMeterSerialNumber());
 			detail.setChargeBackCode(detailRawLine.getChargeBackCode());
 			detail.setPostageType(detailRawLine.getPostageType());
-			detail.setCSSCNumber(detailRawLine.getCSSCNumber());
-			detail.setCSSCProductId(detailRawLine.getCSSCProductId());
+			/*detail.setCSSCNumber(detailRawLine.getCSSCNumber());
+			detail.setCSSCProductId(detailRawLine.getCSSCProductId());*/
 			detail.setManifestedSurchargeType(detailRawLine.getManifestedSurchargeType());
 			detail.setManifestedSurchargeAmount(DataTypes.toDouble(detailRawLine.getManifestedSurchargeAmount()));
 			detail.setDiscountType(detailRawLine.getDiscountType());
@@ -196,28 +196,28 @@ public class ManifestDetailProcessor {
 			//REL 26.0.0
 			detail.setWaiverOfSignature(detailRawLine.getWaiverOfSignature());
 			//REL 31.0.0
-			if (DataTypes.isBarcodeInternational(detail.getBarcodeConstruct().trim())) 
+/*			if (DataTypes.isBarcodeInternational(detail.getBarcodeConstruct().trim())) 
 				detail.setIntlMailInd("Y");
-			else detail.setIntlMailInd("N");
-			detail.setDeliveryOptionIndicator(detailRawLine.getDeliveryOptionIndicator());
+			else detail.setIntlMailInd("N");*/
+			//detail.setDeliveryOptionIndicator(detailRawLine.getDeliveryOptionIndicator());
 			detail.setDestinationDeliveryPoint(detailRawLine.getDestinationDeliveryPoint());
-			detail.setRemovalIndicator(detailRawLine.getRemovalIndicator());
+/*			detail.setRemovalIndicator(detailRawLine.getRemovalIndicator());
 			detail.setOverlabelIndicator(detailRawLine.getOverlabelIndicator());
-			detail.setCustomerReferenceNumber2(detailRawLine.getCustomerReferenceNumber2().trim());
-			if ("01".equals(detail.getOverlabelIndicator().trim())) {
+*/			detail.setCustomerReferenceNumber2(detailRawLine.getCustomerReferenceNumber2().trim());
+/*			if ("01".equals(detail.getOverlabelIndicator().trim())) {
 				detail.setOverlabelBarcodeConstructCode(detailRawLine.getOverlabelBarcodeConstructCode().trim());
 				detail.setOverlabelNumber(detailRawLine.getOverlabelNumber().trim());
 			}
-			detail.setRecipientName(detailRawLine.getRecipientName());
+*///			detail.setRecipientName(detailRawLine.getRecipientName());
 			detail.setDeliveryAddress(detailRawLine.getDeliveryAddress());
-			detail.setAncillaryServiceEndorsement(detailRawLine.getAncillaryServiceEndorsement());
-			detail.setAddressServiceParticipantCode(detailRawLine.getAddressServiceParticipantCode());
+	//		detail.setAncillaryServiceEndorsement(detailRawLine.getAncillaryServiceEndorsement());
+		//	detail.setAddressServiceParticipantCode(detailRawLine.getAddressServiceParticipantCode());
 			detail.setKeyLine(detailRawLine.getKeyLine());
 			detail.setReturnAddress(detailRawLine.getReturnAddress());
 			detail.setReturnAddressCity(detailRawLine.getReturnAddressCity());
 			detail.setReturnAddressState(detailRawLine.getReturnAddressState());
 			detail.setReturnAddressZip(detailRawLine.getReturnAddressZip());
-			detail.setLogisticMailingFacilityCRID(detailRawLine.getLogisticMailingFacilityCRID());
+			//detail.setLogisticMailingFacilityCRID(detailRawLine.getLogisticMailingFacilityCRID());
 			detail.setInternationalProcessStatus(detailRawLine.getInternationalProcessStatus());
 			
 			detail.setFiller(detailRawLine.getFiller());	
